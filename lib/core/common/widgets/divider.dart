@@ -1,15 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/nav2/get_router_delegate.dart';
-import 'package:get/get_navigation/src/routes/get_transition_mixin.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_disposable.dart';
-import 'package:get/get_state_manager/src/simple/get_responsive.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
-import 'package:get/get_utils/src/extensions/string_extensions.dart';
-import 'package:get/get_utils/src/platform/platform_web.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
-import 'package:shoppy/core/utils/constants/text_strings.dart';
-import 'package:shoppy/core/utils/device/device_utility.dart';
-import 'package:shoppy/core/utils/helpers/helper_functions.dart';
 
 class TDivider extends StatelessWidget {
   const TDivider({
@@ -33,7 +23,7 @@ class TDivider extends StatelessWidget {
           endIndent: 5,
         )),
         Text(
-         text,
+          text,
           style: Theme.of(context).textTheme.labelMedium,
         ),
         Flexible(
