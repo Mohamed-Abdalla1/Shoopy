@@ -34,7 +34,6 @@ dependencies:
   firebase_storage: ^12.2.0
   flutter:
     sdk: flutter
-  flutter_native_splash: ^2.4.1
   flutter_rating_bar: ^4.0.1
   get: ^4.6.6
   get_storage: ^2.1.1
