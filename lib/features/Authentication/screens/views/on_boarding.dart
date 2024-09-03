@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shoppy/core/utils/constants/image_strings.dart';
 import 'package:shoppy/core/utils/constants/text_strings.dart';
+import 'package:shoppy/features/Authentication/screens/widgets/on_boardind_dot_navigator.dart';
+import 'package:shoppy/features/Authentication/screens/widgets/on_boarding_button.dart';
 import 'package:shoppy/features/Authentication/screens/widgets/on_boarding_page.dart';
-
+import 'package:shoppy/features/Authentication/screens/widgets/on_boarding_skip.dart';
 
 class OnBoardingView extends StatelessWidget {
   const OnBoardingView({super.key});
@@ -14,7 +16,7 @@ class OnBoardingView extends StatelessWidget {
         //HorizantalScrollable pages
         children: [
           PageView(
-            children: const[
+            children: const [
               OnBoardingPage(
                 image: AssetImage(TImages.onBoardingImage1),
                 title: TTexts.onBoardingTitle1,
@@ -31,13 +33,15 @@ class OnBoardingView extends StatelessWidget {
                 subTitle: TTexts.onBoardingSubTitle3,
               ),
             ],
-          )
+          ),
+          //skip Button
+          const OnBoardingSkip(),
+          //dot navigator
+          const OnBoardingDotNavigator(),
+          // circular button
+          const OnBoardingButton()
         ],
-        //skip Button
-        //dot navigator
-        // circular button
       ),
     );
   }
 }
-
