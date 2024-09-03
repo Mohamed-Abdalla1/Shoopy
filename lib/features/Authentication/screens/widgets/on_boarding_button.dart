@@ -1,10 +1,10 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/device/device_utility.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
+import 'package:shoppy/features/Authentication/controller/onBoarding_controller.dart';
 
 class OnBoardingButton extends StatelessWidget {
   const OnBoardingButton({
@@ -21,7 +21,9 @@ class OnBoardingButton extends StatelessWidget {
             style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
                 backgroundColor: dark ? TColors.primary : Colors.black),
-            onPressed: () {},
+            onPressed: () {
+              OnboardingController.instance.nextPage();
+            },
             child: const Icon(CupertinoIcons.arrow_right)));
   }
 }
