@@ -1,7 +1,7 @@
-import 'package:iconsax/iconsax.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_utils/src/extensions/export.dart';
 import 'package:shoppy/core/common/styles/Tspacing_style.dart';
-import 'package:shoppy/core/utils/constants/sizes.dart';
+import 'package:shoppy/core/common/widgets/divider.dart';
 import 'package:shoppy/core/utils/constants/text_strings.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
 import 'package:shoppy/features/Authentication/screens/widgets/login_form.dart';
@@ -23,6 +23,11 @@ class LoginView extends StatelessWidget {
               LoginHeader(dark: dark),
               //Form
               const LoginForm(),
+              //Divider
+              TDivider(
+                dark: dark,
+                text: TTexts.orSignInWith.capitalize!,
+              ),
               
             ],
           ),
