@@ -37,9 +37,10 @@ class SignUpView extends StatelessWidget {
               //Divider
               TDivider(dark: dark, text: TTexts.orSignUpWith),
               const SizedBox(
-                height: TSizes.defaultSpace,
+                height: TSizes.sm,
               ),
               //Social btns
+              const SocialBtns()
             ],
           ),
         ),
