@@ -4,8 +4,8 @@ import 'package:shoppy/core/common/widgets/divider.dart';
 import 'package:shoppy/core/common/widgets/social_buttons.dart';
 import 'package:shoppy/core/utils/constants/text_strings.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
-import 'package:shoppy/features/Authentication/screens/widgets/login_form.dart';
-import 'package:shoppy/features/Authentication/screens/widgets/login_header.dart';
+import 'package:shoppy/features/Authentication/screens/login/widgets/login_form.dart';
+import 'package:shoppy/features/Authentication/screens/login/widgets/login_header.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});

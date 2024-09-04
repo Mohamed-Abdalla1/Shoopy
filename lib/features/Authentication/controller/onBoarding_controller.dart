@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shoppy/features/Authentication/screens/views/login_view.dart';
+import 'package:shoppy/features/Authentication/screens/login/login_view.dart';
 
 class OnboardingController extends GetxController {
   static OnboardingController get instance => Get.find();

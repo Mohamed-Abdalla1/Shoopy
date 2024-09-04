@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/constants/text_strings.dart';
+import 'package:shoppy/features/Authentication/screens/signUp/signUp_view.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -67,7 +69,10 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                  onPressed: () {}, child: const Text(TTexts.createAccount)),
+                  onPressed: () {
+                    Get.to(const SignUpView());
+                  },
+                  child: const Text(TTexts.createAccount)),
             ),
           ],
         ),
