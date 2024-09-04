@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:shoppy/core/utils/constants/colors.dart';
+import 'package:shoppy/core/common/widgets/divider.dart';
+import 'package:shoppy/core/common/widgets/social_buttons.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/constants/text_strings.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
@@ -19,7 +19,6 @@ class SignUpView extends StatelessWidget {
           padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               //title
               Text(
@@ -32,7 +31,14 @@ class SignUpView extends StatelessWidget {
               ),
               //form
               SignUpForm(dark: dark),
+              const SizedBox(
+                height: TSizes.defaultSpace,
+              ),
               //Divider
+              TDivider(dark: dark, text: TTexts.orSignUpWith),
+              const SizedBox(
+                height: TSizes.defaultSpace,
+              ),
               //Social btns
             ],
           ),
