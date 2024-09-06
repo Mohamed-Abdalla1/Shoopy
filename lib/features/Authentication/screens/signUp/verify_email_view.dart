@@ -26,7 +26,10 @@ class VerifyEmailView extends StatelessWidget {
           child: Column(
             children: [
               //image
-             
+              Image(
+                image:const AssetImage(TImages.deliveredEmailIllustration),
+                width: TDeviceUtils.getScreenWidth(context) * 0.6,
+              ),
               //title & subTitle
               //Buttons
             ],
