@@ -3,6 +3,7 @@ import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:shoppy/core/utils/constants/image_strings.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
+import 'package:shoppy/core/utils/constants/text_strings.dart';
 import 'package:shoppy/core/utils/device/device_utility.dart';
 import 'package:shoppy/features/Authentication/screens/login/login_view.dart';
 
@@ -27,10 +28,21 @@ class VerifyEmailView extends StatelessWidget {
             children: [
               //image
               Image(
-                image:const AssetImage(TImages.deliveredEmailIllustration),
+                image: const AssetImage(TImages.deliveredEmailIllustration),
                 width: TDeviceUtils.getScreenWidth(context) * 0.6,
               ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
               //title & subTitle
+              Text(
+                TTexts.confirmEmail,
+                style: Theme.of(context).textTheme.labelLarge,
+              ),
+              Text(
+                TTexts.confirmEmail,
+                style: Theme.of(context).textTheme.labelLarge,
+              ),
               //Buttons
             ],
           ),
