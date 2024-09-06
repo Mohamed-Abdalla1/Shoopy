@@ -28,6 +28,8 @@ class ForgetPasswordView extends StatelessWidget {
                   prefixIcon:  Icon(Iconsax.direct_right)
                 ),
               ),
+              const SizedBox(height: TSizes.spaceBtwItems,),
+
               //submit button
               SizedBox(
                 width: double.infinity,

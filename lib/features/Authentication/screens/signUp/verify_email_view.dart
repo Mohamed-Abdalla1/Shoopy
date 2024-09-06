@@ -48,6 +48,9 @@ class VerifyEmailView extends StatelessWidget {
                 TTexts.confirmEmailSubTitle,
                 style: Theme.of(context).textTheme.labelLarge,
               ),
+               const SizedBox(
+                height: TSizes.spaceBtwItems,
+              ),
               //Buttons
               SizedBox(
                 width: double.infinity,

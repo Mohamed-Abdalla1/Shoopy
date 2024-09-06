@@ -43,6 +43,8 @@ class SucccessView extends StatelessWidget {
                 TTexts.yourAccountCreatedSubTitle,
                 style: Theme.of(context).textTheme.labelLarge,
               ),
+              const SizedBox(height: TSizes.spaceBtwItems,),
+
               //Buttons
               SizedBox(
                 width: double.infinity,
