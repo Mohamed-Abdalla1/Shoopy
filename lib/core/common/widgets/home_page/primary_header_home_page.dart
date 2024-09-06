@@ -16,6 +16,7 @@ class PrimaryHeaderHomePage extends StatelessWidget {
         height: 400,
         child: Container(
           color: TColors.primary,
+          padding: const EdgeInsets.all(0),
           child: Stack(
             children: [
               Positioned(
