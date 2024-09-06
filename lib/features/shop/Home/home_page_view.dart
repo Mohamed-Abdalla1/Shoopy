@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shoppy/core/common/widgets/primary_header_home_page.dart';
+import 'package:shoppy/core/common/widgets/home_page/primary_header_home_page.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
@@ -11,9 +11,7 @@ class HomePageView extends StatelessWidget {
         child: Column(
           children: [
             PrimaryHeaderHomePage(
-              child: Column(
-                children: [Container()],
-              ),
+              child: Container(),
             ),
           ],
         ),

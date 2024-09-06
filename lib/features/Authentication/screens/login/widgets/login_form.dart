@@ -54,7 +54,8 @@ class LoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () => Get.to(const ForgetPasswordView()), child: const Text(TTexts.forgetPassword))
+                    onPressed: () => Get.to(const ForgetPasswordView()),
+                    child: const Text(TTexts.forgetPassword))
               ],
             ),
             const SizedBox(
@@ -63,7 +64,8 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: ()=> Get.offAll(const BottomNavigation()), child: const Text(TTexts.signIn)),
+                  onPressed: () => Get.off(const BottomNavigation()),
+                  child: const Text(TTexts.signIn)),
             ),
             const SizedBox(
               height: TSizes.spaceBtwItems,
