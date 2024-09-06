@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
+import 'package:shoppy/features/shop/Home/home_page_view.dart';
 
 class BottomNavigation extends StatelessWidget {
   const BottomNavigation({super.key});
@@ -15,8 +16,9 @@ class BottomNavigation extends StatelessWidget {
       bottomNavigationBar: Obx(
         () => NavigationBar(
           selectedIndex: controller.selectIndex.value,
-          onDestinationSelected: (index) => controller.selectIndex.value = index,
-          destinations: const[
+          onDestinationSelected: (index) =>
+              controller.selectIndex.value = index,
+          destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
             NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
             NavigationDestination(icon: Icon(Iconsax.heart), label: 'WishList'),
@@ -29,15 +31,17 @@ class BottomNavigation extends StatelessWidget {
           backgroundColor: dark ? TColors.black : TColors.white,
         ),
       ),
-      body: Obx(
-        ()=> controller.screens[controller.selectIndex.value]
-      ),
+      body: Obx(() => controller.screens[controller.selectIndex.value]),
     );
-    
   }
 }
 
 class NavigateController extends GetxController {
   final Rx<int> selectIndex = 0.obs;
-  final screens = [ColoredBox(color: Colors.red), Text('data'),Text('data'), Text('data')];
+  final dynamic screens = const [
+    HomePageView(),
+    Text('data'),
+    Text('data'),
+    Text('data')
+  ];
 }
