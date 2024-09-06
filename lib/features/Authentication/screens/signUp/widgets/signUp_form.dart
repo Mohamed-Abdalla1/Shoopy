@@ -1,9 +1,10 @@
-
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/constants/text_strings.dart';
+import 'package:shoppy/features/Authentication/screens/signUp/verify_email_view.dart';
 
 class SignUpForm extends StatelessWidget {
   const SignUpForm({
@@ -32,8 +33,7 @@ class SignUpForm extends StatelessWidget {
               child: TextFormField(
                 expands: false,
                 decoration: const InputDecoration(
-                    labelText: TTexts.lastName,
-                    prefixIcon: Icon(Iconsax.user)),
+                    labelText: TTexts.lastName, prefixIcon: Icon(Iconsax.user)),
               ),
             ),
           ],
@@ -44,8 +44,7 @@ class SignUpForm extends StatelessWidget {
         TextFormField(
           expands: false,
           decoration: const InputDecoration(
-              labelText: TTexts.username,
-              prefixIcon: Icon(Iconsax.user_edit)),
+              labelText: TTexts.username, prefixIcon: Icon(Iconsax.user_edit)),
         ),
         const SizedBox(
           height: TSizes.spaceBtwInputFields,
@@ -61,8 +60,7 @@ class SignUpForm extends StatelessWidget {
         TextFormField(
           expands: false,
           decoration: const InputDecoration(
-              labelText: TTexts.phoneNo,
-              prefixIcon: Icon(Iconsax.call)),
+              labelText: TTexts.phoneNo, prefixIcon: Icon(Iconsax.call)),
         ),
         const SizedBox(
           height: TSizes.spaceBtwInputFields,
@@ -90,14 +88,10 @@ class SignUpForm extends StatelessWidget {
                   style: Theme.of(context).textTheme.labelSmall),
               TextSpan(
                   text: (' ${TTexts.privacyPolicy} '),
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyMedium!
-                      .apply(
+                  style: Theme.of(context).textTheme.bodyMedium!.apply(
                         color: dark ? TColors.white : TColors.primary,
                         decoration: TextDecoration.underline,
-                        decorationColor:
-                            dark ? TColors.white : TColors.primary,
+                        decorationColor: dark ? TColors.white : TColors.primary,
                       )),
               TextSpan(
                 text: ('${TTexts.and} '),
@@ -108,8 +102,7 @@ class SignUpForm extends StatelessWidget {
                 style: Theme.of(context).textTheme.bodyMedium!.apply(
                       color: dark ? TColors.white : TColors.primary,
                       decoration: TextDecoration.underline,
-                      decorationColor:
-                          dark ? TColors.white : TColors.primary,
+                      decorationColor: dark ? TColors.white : TColors.primary,
                     ),
               ),
             ])),
@@ -121,7 +114,7 @@ class SignUpForm extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Get.to(const VerifyEmailView()),
               child: const Text(TTexts.createAccount)),
         )
       ],

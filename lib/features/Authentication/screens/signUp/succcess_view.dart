@@ -12,7 +12,7 @@ class SucccessView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
@@ -23,7 +23,7 @@ class SucccessView extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding:  TSpacingStyle.paddingWithAppBarHeight * 2,
+          padding: TSpacingStyle.paddingWithAppBarHeight * 2,
           child: Column(
             children: [
               //image
@@ -43,13 +43,16 @@ class SucccessView extends StatelessWidget {
                 TTexts.yourAccountCreatedSubTitle,
                 style: Theme.of(context).textTheme.labelLarge,
               ),
-              const SizedBox(height: TSizes.spaceBtwItems,),
+              const SizedBox(
+                height: TSizes.spaceBtwItems,
+              ),
 
               //Buttons
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text(TTexts.tContinue)),
+                    onPressed: () => Get.offAll(const LoginView()),
+                    child: const Text(TTexts.tContinue)),
               ),
             ],
           ),

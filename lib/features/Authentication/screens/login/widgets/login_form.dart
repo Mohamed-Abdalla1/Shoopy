@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shoppy/bottom_navigation.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/constants/text_strings.dart';
 import 'package:shoppy/features/Authentication/screens/forget%20password/forget_password.dart';
@@ -62,7 +63,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {}, child: const Text(TTexts.signIn)),
+                  onPressed: ()=> Get.offAll(const BottomNavigation()), child: const Text(TTexts.signIn)),
             ),
             const SizedBox(
               height: TSizes.spaceBtwItems,
