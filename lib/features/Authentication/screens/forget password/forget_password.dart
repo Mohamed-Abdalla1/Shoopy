@@ -27,6 +27,10 @@ class ForgetPasswordView extends StatelessWidget {
                 ),
               ),
               //submit button
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(onPressed: (){}, child:const  Text(TTexts.submit)),
+              )
             ],
           ),
         ),
