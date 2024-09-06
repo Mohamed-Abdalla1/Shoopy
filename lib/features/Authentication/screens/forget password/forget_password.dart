@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/constants/text_strings.dart';
+import 'package:shoppy/features/Authentication/screens/forget%20password/reset_password_view.dart';
 
 class ForgetPasswordView extends StatelessWidget {
   const ForgetPasswordView({super.key});
@@ -29,7 +31,7 @@ class ForgetPasswordView extends StatelessWidget {
               //submit button
               SizedBox(
                 width: double.infinity,
-                child: ElevatedButton(onPressed: (){}, child:const  Text(TTexts.submit)),
+                child: ElevatedButton(onPressed: ()=>Get.off(const ResetPasswordView()), child:const  Text(TTexts.submit)),
               )
             ],
           ),
