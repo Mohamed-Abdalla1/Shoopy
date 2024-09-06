@@ -53,7 +53,7 @@ class LoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () => Get.to(const ForgetPassword()), child: const Text(TTexts.forgetPassword))
+                    onPressed: () => Get.to(const ForgetPasswordView()), child: const Text(TTexts.forgetPassword))
               ],
             ),
             const SizedBox(
