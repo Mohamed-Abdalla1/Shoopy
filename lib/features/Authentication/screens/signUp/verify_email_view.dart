@@ -44,6 +44,19 @@ class VerifyEmailView extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelLarge,
               ),
               //Buttons
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                    onPressed: () {}, child: const Text(TTexts.tContinue)),
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwInputFields,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                    onPressed: () {}, child: const Text(TTexts.resendEmail)),
+              ),
             ],
           ),
         ),
