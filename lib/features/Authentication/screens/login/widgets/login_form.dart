@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/constants/text_strings.dart';
+import 'package:shoppy/features/Authentication/screens/forget%20password/forget_password.dart';
 import 'package:shoppy/features/Authentication/screens/signUp/signUp_view.dart';
 
 class LoginForm extends StatelessWidget {
@@ -52,7 +53,7 @@ class LoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () {}, child: const Text(TTexts.forgetPassword))
+                    onPressed: () => Get.to(const ForgetPassword()), child: const Text(TTexts.forgetPassword))
               ],
             ),
             const SizedBox(

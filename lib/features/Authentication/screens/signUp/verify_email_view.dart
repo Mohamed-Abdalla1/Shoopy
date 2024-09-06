@@ -6,6 +6,7 @@ import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/constants/text_strings.dart';
 import 'package:shoppy/core/utils/device/device_utility.dart';
 import 'package:shoppy/features/Authentication/screens/login/login_view.dart';
+import 'package:shoppy/features/Authentication/screens/signUp/succcess_view.dart';
 
 class VerifyEmailView extends StatelessWidget {
   const VerifyEmailView({super.key});
@@ -51,7 +52,8 @@ class VerifyEmailView extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text(TTexts.tContinue)),
+                    onPressed: () => Get.to(const SucccessView()),
+                    child: const Text(TTexts.tContinue)),
               ),
               const SizedBox(
                 height: TSizes.spaceBtwInputFields,
