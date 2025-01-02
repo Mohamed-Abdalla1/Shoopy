@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';

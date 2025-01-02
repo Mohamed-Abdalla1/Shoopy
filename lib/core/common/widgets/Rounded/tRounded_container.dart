@@ -2,25 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 
-class TCircularContainer extends StatelessWidget {
-  const TCircularContainer({
+class TroundedContainer extends StatelessWidget {
+  const TroundedContainer({
     super.key,
-    this.width = 400,
-    this.height = 400,
-    this.raduis = 400,
-    this.padding = 0,
+    this.width,
+    this.height,
+    this.raduis = TSizes.borderRadiusLg,
+    this.padding,
     this.backGroundColor = TColors.white,
     this.child,
     this.margin,
     this.borderColor = TColors.borderPrimary,
     this.showBorder = false,
   });
-  final double width, height, raduis, padding;
+  final double? width, height;
+  final double raduis;
   final Color? backGroundColor;
   final Color borderColor;
   final Widget? child;
   final bool showBorder;
-  final EdgeInsetsGeometry? margin;
+  final EdgeInsetsGeometry? margin, padding;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,6 +32,7 @@ class TCircularContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(raduis),
           color: backGroundColor,
           border: showBorder ? Border.all(color: borderColor) : null),
+      child: child,
     );
   }
 }
