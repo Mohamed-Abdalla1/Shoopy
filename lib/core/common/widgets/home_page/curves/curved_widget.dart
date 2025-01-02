@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:shoppy/core/common/widgets/home_page/curved_edges.dart';
+import 'package:shoppy/core/common/widgets/home_page/curves/curved_edges.dart';
 
 class TCurvedEdgeWidget extends StatelessWidget {
   const TCurvedEdgeWidget({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shoppy/core/common/widgets/home_page/curved_widget.dart';
-import 'package:shoppy/core/common/widgets/home_page/tCircular_container.dart';
+import 'package:shoppy/core/common/widgets/home_page/curves/curved_widget.dart';
+import 'package:shoppy/core/common/widgets/Rounded/tCircular_container.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 
 class PrimaryHeaderHomePage extends StatelessWidget {
