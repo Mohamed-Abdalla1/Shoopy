@@ -35,7 +35,24 @@ class ProductVerticalGridview extends StatelessWidget {
                     //thubnail image
                     RoundedImage(imageUrl: TImages.productImage1),
                     //sale tag
-                   
+                    Positioned(
+                      top: 12,
+                      child: TroundedContainer(
+                        raduis: TSizes.sm,
+                        backGroundColor: TColors.secondary.withOpacity(0.8),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        child: Text(
+                          ' 25% ',
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelLarge!
+                              .apply(color: TColors.black),
+                        ),
+                        //favourit icon
+                        
+                      ),
+                    )
                   ],
                 ),
               ),
