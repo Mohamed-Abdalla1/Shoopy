@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/common/styles/Tshadow_style.dart';
 import 'package:shoppy/core/common/widgets/Rounded/rounded_image.dart';
 import 'package:shoppy/core/common/widgets/Rounded/tCircular_container.dart';
@@ -17,7 +18,7 @@ class ProductVerticalGridview extends StatelessWidget {
     return GestureDetector(
       child: Center(
         child: Container(
-          width: 150,
+          width: 160,
           padding: const EdgeInsets.all(1),
           decoration: BoxDecoration(
               boxShadow: [TshadowStyle.verticalShadow],
@@ -27,7 +28,7 @@ class ProductVerticalGridview extends StatelessWidget {
             children: [
               //thubnail , wishList btn , discount tag
               TroundedContainer(
-                height: 150,
+                height: 160,
                 padding: const EdgeInsets.all(TSizes.sm),
                 backGroundColor: dark ? TColors.dark : TColors.light,
                 child: Stack(
@@ -49,10 +50,24 @@ class ProductVerticalGridview extends StatelessWidget {
                               .labelLarge!
                               .apply(color: TColors.black),
                         ),
-                        //favourit icon
-                        
                       ),
-                    )
+                    ),
+                    //favourit icon
+                    Positioned(
+                        right: 0,
+                        top: 0,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              color: dark
+                                  ? TColors.black.withOpacity(0.9)
+                                  : TColors.white.withOpacity(0.9)),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Iconsax.heart5),
+                            color: Colors.red,
+                          ),
+                        ))
                   ],
                 ),
               ),
