@@ -7,6 +7,7 @@ import 'package:shoppy/core/common/widgets/heading_section.dart';
 import 'package:shoppy/core/common/widgets/home_page/app%20bar/home_app_bar.dart';
 import 'package:shoppy/core/common/widgets/home_page/home_categories/home_categories.dart';
 import 'package:shoppy/core/common/widgets/home_page/primary_header_home_page.dart';
+import 'package:shoppy/core/common/widgets/home_page/product%20grid%20view/product_vertical_gridview.dart';
 import 'package:shoppy/core/common/widgets/home_page/search/search_container.dart';
 import 'package:shoppy/core/common/widgets/promo_slider.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
@@ -57,11 +58,17 @@ class HomePageView extends StatelessWidget {
                 ],
               ),
             ),
+            //promo slider
             Padding(
               padding: const EdgeInsets.symmetric(
                   horizontal: TSizes.spaceBtwSections),
               child: PromoSlider(),
             ),
+            const SizedBox(
+              height: TSizes.sm,
+            ),
+            ProductVerticalGridview()
+            //
           ],
         ),
       ),
