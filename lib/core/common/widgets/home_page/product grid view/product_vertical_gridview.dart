@@ -4,6 +4,7 @@ import 'package:shoppy/core/common/styles/Tshadow_style.dart';
 import 'package:shoppy/core/common/widgets/Rounded/rounded_image.dart';
 import 'package:shoppy/core/common/widgets/Rounded/tRounded_container.dart';
 import 'package:shoppy/core/common/widgets/Rounded/t_circular_icon.dart';
+import 'package:shoppy/core/common/widgets/texts/t_product_title_text.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/constants/image_strings.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
@@ -66,7 +67,20 @@ class ProductVerticalGridview extends StatelessWidget {
                 ),
               ),
               //Details
-              
+              Padding(
+                padding: EdgeInsets.only(left: TSizes.sm),
+                child: Column(
+                  children: [
+                    //title
+                    TProductTitleText(
+                      title: 'Green Nike Par Shoes ',
+                    )
+
+                    //subtitle source
+                    //price btn
+                  ],
+                ),
+              )
             ],
           ),
         ),
