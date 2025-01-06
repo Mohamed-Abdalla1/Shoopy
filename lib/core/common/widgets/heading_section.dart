@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 
@@ -35,7 +34,7 @@ class HeadingSection extends StatelessWidget {
               child: Text(
                 btnTitle,
                 style: const TextStyle(
-                  color: TColors.grey,
+                  color: TColors.darkGrey,
                 ),
               ))
       ],

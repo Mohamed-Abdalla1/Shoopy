@@ -11,21 +11,22 @@ import 'package:shoppy/core/common/widgets/home_page/product%20grid%20view/produ
 import 'package:shoppy/core/common/widgets/home_page/search/search_container.dart';
 import 'package:shoppy/core/common/widgets/promo_slider.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
-import 'package:shoppy/core/utils/constants/image_strings.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
-import 'package:shoppy/core/utils/device/device_utility.dart';
+import 'package:shoppy/core/utils/constants/text_strings.dart';
+import 'package:shoppy/core/utils/helpers/helper_functions.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    bool dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            PrimaryHeaderHomePage(
+            const PrimaryHeaderHomePage(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -65,9 +66,32 @@ class HomePageView extends StatelessWidget {
               child: PromoSlider(),
             ),
             const SizedBox(
-              height: TSizes.sm,
+              height: TSizes.lg,
             ),
-            ProductVerticalGridview()
+            Padding(
+              padding: const EdgeInsets.only(left: TSizes.md),
+              child: HeadingSection(
+                title: TTexts.popularProducts,
+                textColor: dark ? TColors.white : TColors.black,
+                showActionButton: true,
+              ),
+            ),
+            GridView.builder(
+              itemCount: 4,
+              shrinkWrap: true,
+              padding: const EdgeInsets.all(0),
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                mainAxisExtent: 260,
+                crossAxisCount: 2,
+                mainAxisSpacing: TSizes.gridViewSpacing,
+                crossAxisSpacing: TSizes.gridViewSpacing,
+              ),
+              itemBuilder: (context, index) {
+                return const ProductVerticalGridview();
+              },
+            )
+
             //
           ],
         ),

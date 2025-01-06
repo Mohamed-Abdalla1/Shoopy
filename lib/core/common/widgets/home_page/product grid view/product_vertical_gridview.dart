@@ -11,12 +11,13 @@ import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
 
 class ProductVerticalGridview extends StatelessWidget {
-  const ProductVerticalGridview({super.key});
-
+  const ProductVerticalGridview({super.key, this.onTap});
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
     final bool dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
+      onTap: onTap,
       child: Center(
         child: Container(
           width: 150,
@@ -71,7 +72,7 @@ class ProductVerticalGridview extends StatelessWidget {
                 height: TSizes.sm,
               ),
               Padding(
-                padding: EdgeInsets.only(left: TSizes.sm),
+                padding: const EdgeInsets.only(left: TSizes.sm),
                 child: Column(
                   children: [
                     //title
@@ -93,14 +94,50 @@ class ProductVerticalGridview extends StatelessWidget {
                         const SizedBox(
                           width: TSizes.xs,
                         ),
-                       const Icon(
+                        const Icon(
                           Iconsax.verify5,
                           color: TColors.primary,
                           size: TSizes.iconXs,
                         ),
                       ],
-                    )
+                    ),
+                    const SizedBox(
+                      height: TSizes.sm,
+                    ),
                     //price btn
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        // price
+                        Text(
+                          '\$35.5',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: Theme.of(context).textTheme.headlineMedium,
+                        ),
+                        //btn
+                        Container(
+                          decoration: const BoxDecoration(
+                            color: TColors.dark,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(TSizes.cardRadiusMd),
+                              bottomRight:
+                                  Radius.circular(TSizes.productImageRadius),
+                            ),
+                          ),
+                          child: const SizedBox(
+                            height: TSizes.iconLg,
+                            width: TSizes.iconLg * 1.1,
+                            child: Center(
+                              child: Icon(
+                                Iconsax.add,
+                                color: TColors.white,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    )
                   ],
                 ),
               )

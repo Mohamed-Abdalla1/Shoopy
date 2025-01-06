@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:shoppy/core/common/widgets/home_page/vertical_Image_text.dart';
 import 'package:shoppy/core/utils/constants/image_strings.dart';
@@ -18,8 +17,8 @@ class HomeCategories extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return const VerticalImageText(
-            image: TImages.shoeIcon,
-            title: 'Shoes',
+            image: TImages.sportIcon,
+            title: 'Sports',
           );
         },
       ),
