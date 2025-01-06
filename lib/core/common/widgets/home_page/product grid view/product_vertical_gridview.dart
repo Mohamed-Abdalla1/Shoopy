@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/common/styles/Tshadow_style.dart';
 import 'package:shoppy/core/common/widgets/Rounded/rounded_image.dart';
-import 'package:shoppy/core/common/widgets/Rounded/tCircular_container.dart';
 import 'package:shoppy/core/common/widgets/Rounded/tRounded_container.dart';
+import 'package:shoppy/core/common/widgets/Rounded/t_circular_icon.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/constants/image_strings.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
@@ -18,7 +18,7 @@ class ProductVerticalGridview extends StatelessWidget {
     return GestureDetector(
       child: Center(
         child: Container(
-          width: 160,
+          width: 150,
           padding: const EdgeInsets.all(1),
           decoration: BoxDecoration(
               boxShadow: [TshadowStyle.verticalShadow],
@@ -28,7 +28,7 @@ class ProductVerticalGridview extends StatelessWidget {
             children: [
               //thubnail , wishList btn , discount tag
               TroundedContainer(
-                height: 160,
+                height: 150,
                 padding: const EdgeInsets.all(TSizes.sm),
                 backGroundColor: dark ? TColors.dark : TColors.light,
                 child: Stack(
@@ -55,22 +55,18 @@ class ProductVerticalGridview extends StatelessWidget {
                     //favourit icon
                     Positioned(
                         right: 0,
-                        top: 0,
-                        child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(100),
-                              color: dark
-                                  ? TColors.black.withOpacity(0.9)
-                                  : TColors.white.withOpacity(0.9)),
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(Iconsax.heart5),
-                            color: Colors.red,
-                          ),
+                        top: -0,
+                        child: TCircularIcon(
+                          width: 40,
+                          height: 40,
+                          icon: Iconsax.heart5,
+                          iconColor: Colors.red,
                         ))
                   ],
                 ),
               ),
+              //Details
+              
             ],
           ),
         ),
