@@ -67,16 +67,39 @@ class ProductVerticalGridview extends StatelessWidget {
                 ),
               ),
               //Details
+              const SizedBox(
+                height: TSizes.sm,
+              ),
               Padding(
                 padding: EdgeInsets.only(left: TSizes.sm),
                 child: Column(
                   children: [
                     //title
-                    TProductTitleText(
+                    const TProductTitleText(
                       title: 'Green Nike Par Shoes ',
-                    )
-
+                    ),
+                    const SizedBox(
+                      height: TSizes.sm,
+                    ),
                     //subtitle source
+                    Row(
+                      children: [
+                        Text(
+                          'Nike',
+                          style: Theme.of(context).textTheme.labelMedium,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                        const SizedBox(
+                          width: TSizes.xs,
+                        ),
+                       const Icon(
+                          Iconsax.verify5,
+                          color: TColors.primary,
+                          size: TSizes.iconXs,
+                        ),
+                      ],
+                    )
                     //price btn
                   ],
                 ),
