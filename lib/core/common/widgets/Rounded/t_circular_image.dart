@@ -26,31 +26,21 @@ class TCircularImage extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: () {},
-      child: TroundedContainer(
-        padding: EdgeInsets.all(TSizes.sm),
-        showBorder: true,
-        backGroundColor: Colors.transparent,
-        child: Row(
-          children: [
-            Container(
-              width: width,
-              height: height,
-              padding: EdgeInsets.all(TSizes.sm),
-              decoration: BoxDecoration(
-                color: backgroundColor ?? dark
-                    ? TColors.black
-                    : TColors.textWhite,
-                borderRadius: BorderRadius.circular(100),
-              ),
-              child: Image(
-                image: isNetworkImage
-                    ? NetworkImage(image)
-                    : AssetImage(image) as ImageProvider,
-                color: overlayColor,
-                fit: boxFit,
-              ),
-            ),
-          ],
+      child: Container(
+        width: width,
+        height: height,
+        padding: const EdgeInsets.all(TSizes.sm),
+        decoration: BoxDecoration(
+          color: backgroundColor ?? dark ? TColors.black : TColors.textWhite,
+          borderRadius: BorderRadius.circular(100),
+        ),
+        child: Image(
+          
+          image: isNetworkImage
+              ? NetworkImage(image)
+              : AssetImage(image) as ImageProvider,
+          color: overlayColor,
+          fit: boxFit,
         ),
       ),
     );
