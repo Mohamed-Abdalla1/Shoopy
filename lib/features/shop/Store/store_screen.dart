@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:shoppy/core/common/widgets/Rounded/t_circular_image.dart';
 import 'package:shoppy/core/common/widgets/app%20bar/cart_counter.dart';
 import 'package:shoppy/core/common/widgets/app%20bar/custom_app_bar.dart';
 import 'package:shoppy/core/common/widgets/home_page/search/search_container.dart';
 import 'package:shoppy/core/common/widgets/texts/heading_section.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
+import 'package:shoppy/core/utils/constants/image_strings.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
 
@@ -59,6 +61,15 @@ class StoreScreen extends StatelessWidget {
                         onPressed: () {},
                         showActionButton: true,
                       ),
+                      const SizedBox(
+                        height: TSizes.spaceBtwItems,
+                      ),
+                      TCircularImage(
+                        image: TImages.clothIcon,
+                        overlayColor: THelperFunctions.isDarkMode(context)
+                            ? TColors.white
+                            : TColors.black,
+                      )
                     ],
                   ),
                 ),
