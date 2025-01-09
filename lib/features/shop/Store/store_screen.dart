@@ -4,6 +4,7 @@ import 'package:shoppy/core/common/widgets/Rounded/t_circular_image.dart';
 import 'package:shoppy/core/common/widgets/app%20bar/cart_counter.dart';
 import 'package:shoppy/core/common/widgets/app%20bar/custom_app_bar.dart';
 import 'package:shoppy/core/common/widgets/brands/brand_title_with_vrified_icon.dart';
+import 'package:shoppy/core/common/widgets/brands/t_brand_card.dart';
 import 'package:shoppy/core/common/widgets/home_page/product%20grid%20view/gridview_layout.dart';
 import 'package:shoppy/core/common/widgets/home_page/search/search_container.dart';
 import 'package:shoppy/core/common/widgets/tab%20bar/t_tab_bar.dart';
@@ -75,42 +76,9 @@ class StoreScreen extends StatelessWidget {
                           mainAxisExtent: 80,
                           itemCount: 4,
                           itemBuilder: (context, index) {
-                            return TroundedContainer(
-                              padding: const EdgeInsets.all(TSizes.sm),
+                            return TBrandCard(
                               showBorder: true,
-                              backGroundColor: Colors.transparent,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Flexible(
-                                    child: TCircularImage(
-                                      image: TImages.clothIcon,
-                                      overlayColor:
-                                          THelperFunctions.isDarkMode(context)
-                                              ? TColors.white
-                                              : TColors.black,
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        const TBrandTitleWithVerifiedIcon(
-                                            title: 'Nike'),
-                                        Text(
-                                          '265 Products',
-                                          overflow: TextOverflow.ellipsis,
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .labelMedium,
-                                        )
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
+                              onTap: () {},
                             );
                           },
                         )
@@ -142,8 +110,10 @@ class StoreScreen extends StatelessWidget {
                         backGroundColor: Colors.transparent,
                         borderColor: TColors.darkGrey,
                         margin: EdgeInsets.only(bottom: TSizes.spaceBtwItems),
-                        child: Column(),
-                      )
+                        child: Column(
+                          children: [],
+                        ),
+                      ),
                     ],
                   ),
                 )
@@ -153,4 +123,3 @@ class StoreScreen extends StatelessWidget {
     );
   }
 }
-
