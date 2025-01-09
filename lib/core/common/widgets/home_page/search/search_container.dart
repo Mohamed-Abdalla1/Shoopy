@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
@@ -7,21 +6,20 @@ import 'package:shoppy/core/utils/device/device_utility.dart';
 
 class SearchContainer extends StatelessWidget {
   const SearchContainer({
-    super.key,
+    super.key,  this.padding = TSizes.defaultSpace,
   });
-
+  final double padding;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
+        padding:  EdgeInsets.all(padding),
         child: Container(
           padding: const EdgeInsets.all(TSizes.md),
           width: TDeviceUtils.getScreenWidth(context),
           decoration: BoxDecoration(
               color: TColors.white,
-              borderRadius:
-                  BorderRadius.circular(TSizes.cardRadiusLg),
+              borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
               border: Border.all(color: TColors.grey)),
           child: Row(
             children: [
@@ -31,7 +29,7 @@ class SearchContainer extends StatelessWidget {
                 color: TColors.darkGrey,
               ),
               //
-    
+
               const SizedBox(width: TSizes.spaceBtwItems),
               //Text
               Text('Search in store',

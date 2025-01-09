@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shoppy/core/common/widgets/app%20bar/cart_counter.dart';
 import 'package:shoppy/core/common/widgets/app%20bar/custom_app_bar.dart';
+import 'package:shoppy/core/common/widgets/home_page/search/search_container.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
+import 'package:shoppy/core/utils/constants/sizes.dart';
+import 'package:shoppy/core/utils/helpers/helper_functions.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -19,6 +22,37 @@ class StoreScreen extends StatelessWidget {
           CartCounterIcon(onPressed: () {}, color: TColors.primary),
         ],
       ),
+      body: NestedScrollView(
+          headerSliverBuilder: (context, innerBoxIsScrolled) {
+            return [
+              SliverAppBar(
+                pinned: true,
+                floating: true,
+                backgroundColor: THelperFunctions.isDarkMode(context)
+                    ? TColors.black
+                    : TColors.white,
+                expandedHeight: 440,
+                automaticallyImplyLeading: false,
+                flexibleSpace: Padding(
+                  padding: const EdgeInsets.all(TSizes.defaultSpace),
+                  child: ListView(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    children: [
+                      SizedBox(
+                        height: TSizes.spaceBtwItems / 2,
+                      ),
+                      //Search container
+                      SearchContainer(
+                        padding: 0,
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ];
+          },
+          body: Column()),
     );
   }
 }
