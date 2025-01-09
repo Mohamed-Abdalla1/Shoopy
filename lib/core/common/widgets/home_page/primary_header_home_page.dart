@@ -6,14 +6,15 @@ import 'package:shoppy/core/utils/constants/colors.dart';
 class PrimaryHeaderHomePage extends StatelessWidget {
   const PrimaryHeaderHomePage({
     super.key,
-    required this.child,
+    required this.child,  this.height = 400,
   });
   final Widget child;
+  final double height;
   @override
   Widget build(BuildContext context) {
     return TCurvedEdgeWidget(
       child: SizedBox(
-        height: 400,
+        height: height,
         child: Container(
           color: TColors.primary,
           padding: const EdgeInsets.all(0),

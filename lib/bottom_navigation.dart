@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
+import 'package:shoppy/features/personalization/Screens/Setting/setting_screen.dart';
 import 'package:shoppy/features/shop/Home/home_page_view.dart';
 import 'package:shoppy/features/shop/Store/store_screen.dart';
 import 'package:shoppy/features/shop/Wishlist/favourite_screen.dart';
@@ -44,6 +45,6 @@ class NavigateController extends GetxController {
     HomePageView(),
     StoreScreen(),
     FavouriteScreen(),
-    Text('data')
+    SettingScreen(),
   ];
 }
