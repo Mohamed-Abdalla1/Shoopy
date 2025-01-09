@@ -5,6 +5,7 @@ import 'package:shoppy/core/common/widgets/app%20bar/cart_counter.dart';
 import 'package:shoppy/core/common/widgets/app%20bar/custom_app_bar.dart';
 import 'package:shoppy/core/common/widgets/brands/brand_title_with_vrified_icon.dart';
 import 'package:shoppy/core/common/widgets/brands/t_brand_card.dart';
+import 'package:shoppy/core/common/widgets/brands/t_brand_show_case.dart';
 import 'package:shoppy/core/common/widgets/home_page/product%20grid%20view/gridview_layout.dart';
 import 'package:shoppy/core/common/widgets/home_page/search/search_container.dart';
 import 'package:shoppy/core/common/widgets/tab%20bar/t_tab_bar.dart';
@@ -102,17 +103,15 @@ class StoreScreen extends StatelessWidget {
             body: TabBarView(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(TSizes.defaultSpace),
+                  padding: const EdgeInsets.all(TSizes.defaultSpace),
                   child: Column(
                     children: [
-                      TroundedContainer(
-                        showBorder: true,
-                        backGroundColor: Colors.transparent,
-                        borderColor: TColors.darkGrey,
-                        margin: EdgeInsets.only(bottom: TSizes.spaceBtwItems),
-                        child: Column(
-                          children: [],
-                        ),
+                      TBrandShowCase(
+                        images: [
+                          TImages.productImage3,
+                          TImages.productImage3,
+                          TImages.productImage3,
+                        ],
                       ),
                     ],
                   ),
