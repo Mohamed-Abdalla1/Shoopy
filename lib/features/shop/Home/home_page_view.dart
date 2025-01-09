@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/common/widgets/Rounded/rounded_image.dart';
 import 'package:shoppy/core/common/widgets/Rounded/tCircular_container.dart';
+import 'package:shoppy/core/common/widgets/home_page/product%20grid%20view/gridview_layout.dart';
 import 'package:shoppy/core/common/widgets/texts/heading_section.dart';
 import 'package:shoppy/core/common/widgets/home_page/app%20bar/home_app_bar.dart';
 import 'package:shoppy/core/common/widgets/home_page/home_categories/home_categories.dart';
@@ -60,7 +61,7 @@ class HomePageView extends StatelessWidget {
               ),
             ),
             //promo slider
-           const Padding(
+            const Padding(
               padding: const EdgeInsets.symmetric(
                   horizontal: TSizes.spaceBtwSections),
               child: PromoSlider(),
@@ -76,20 +77,11 @@ class HomePageView extends StatelessWidget {
                 showActionButton: true,
               ),
             ),
-            GridView.builder(
-              itemCount: 4,
-              shrinkWrap: true,
-              padding: const EdgeInsets.all(0),
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                mainAxisExtent: 260,
-                crossAxisCount: 2,
-                mainAxisSpacing: TSizes.gridViewSpacing,
-                crossAxisSpacing: TSizes.gridViewSpacing,
-              ),
+            TGridViewLayout(
               itemBuilder: (context, index) {
                 return const ProductVerticalGridview();
               },
+              itemCount: 6,
             )
 
             //
