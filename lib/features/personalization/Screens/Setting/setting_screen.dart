@@ -3,6 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:shoppy/core/common/widgets/Rounded/t_circular_image.dart';
 import 'package:shoppy/core/common/widgets/app%20bar/custom_app_bar.dart';
 import 'package:shoppy/core/common/widgets/home_page/primary_header_home_page.dart';
+import 'package:shoppy/core/common/widgets/texts/heading_section.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/constants/image_strings.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
@@ -35,10 +36,22 @@ class SettingScreen extends StatelessWidget {
                   const TUserProfile(
                     email: 'MohamedAbdalla@gmail.com',
                     title: 'Mohamed Abdallah',
-                  )
+                  ),
+                  //body
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  //Acount setting
+                  HeadingSection(title: 'Account Setting'),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
+                  
+                ],
+              ),
+            )
           ],
         ),
       ),
