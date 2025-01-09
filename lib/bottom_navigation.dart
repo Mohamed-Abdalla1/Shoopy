@@ -5,6 +5,7 @@ import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
 import 'package:shoppy/features/shop/Home/home_page_view.dart';
 import 'package:shoppy/features/shop/Store/store_screen.dart';
+import 'package:shoppy/features/shop/Wishlist/favourite_screen.dart';
 
 class BottomNavigation extends StatelessWidget {
   const BottomNavigation({super.key});
@@ -42,7 +43,7 @@ class NavigateController extends GetxController {
   final dynamic screens = const [
     HomePageView(),
     StoreScreen(),
-    Text('data'),
+    FavouriteScreen(),
     Text('data')
   ];
 }
