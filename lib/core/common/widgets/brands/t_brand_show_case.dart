@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:shoppy/core/common/widgets/Rounded/tRounded_container.dart';
 import 'package:shoppy/core/common/widgets/brands/t_brand_card.dart';
@@ -39,9 +38,11 @@ Widget brandTapProductImage(String image, BuildContext context) {
       backGroundColor: THelperFunctions.isDarkMode(context)
           ? TColors.darkGrey
           : TColors.light,
-      margin: const EdgeInsets.only(right: TSizes.sm),
-      padding: const EdgeInsets.all(TSizes.md),
+      margin: const EdgeInsets.symmetric(
+          horizontal: TSizes.xs, vertical: TSizes.sm),
+      padding: const EdgeInsets.all(TSizes.sm),
       child: Image(
+        height: 50,
         image: AssetImage(image),
         fit: BoxFit.cover,
       ),
