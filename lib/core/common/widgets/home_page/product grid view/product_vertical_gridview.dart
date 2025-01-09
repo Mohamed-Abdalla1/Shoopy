@@ -4,8 +4,11 @@ import 'package:shoppy/core/common/styles/Tshadow_style.dart';
 import 'package:shoppy/core/common/widgets/Rounded/rounded_image.dart';
 import 'package:shoppy/core/common/widgets/Rounded/tRounded_container.dart';
 import 'package:shoppy/core/common/widgets/Rounded/t_circular_icon.dart';
+import 'package:shoppy/core/common/widgets/brands/brand_title.dart';
+import 'package:shoppy/core/common/widgets/brands/brand_title_with_vrified_icon.dart';
 import 'package:shoppy/core/common/widgets/texts/t_product_title_text.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
+import 'package:shoppy/core/utils/constants/enums.dart';
 import 'package:shoppy/core/utils/constants/image_strings.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
@@ -83,23 +86,8 @@ class ProductVerticalGridview extends StatelessWidget {
                       height: TSizes.sm,
                     ),
                     //subtitle source
-                    Row(
-                      children: [
-                        Text(
-                          'Nike',
-                          style: Theme.of(context).textTheme.labelMedium,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                        ),
-                        const SizedBox(
-                          width: TSizes.xs,
-                        ),
-                        const Icon(
-                          Iconsax.verify5,
-                          color: TColors.primary,
-                          size: TSizes.iconXs,
-                        ),
-                      ],
+                    const TBrandTitleWithVerifiedIcon(
+                      title: 'Nike',
                     ),
                     const SizedBox(
                       height: TSizes.sm,
