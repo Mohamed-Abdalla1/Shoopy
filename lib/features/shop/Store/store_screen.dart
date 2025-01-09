@@ -6,10 +6,12 @@ import 'package:shoppy/core/common/widgets/app%20bar/custom_app_bar.dart';
 import 'package:shoppy/core/common/widgets/brands/brand_title_with_vrified_icon.dart';
 import 'package:shoppy/core/common/widgets/home_page/product%20grid%20view/gridview_layout.dart';
 import 'package:shoppy/core/common/widgets/home_page/search/search_container.dart';
+import 'package:shoppy/core/common/widgets/tab%20bar/t_tab_bar.dart';
 import 'package:shoppy/core/common/widgets/texts/heading_section.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/constants/image_strings.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
+import 'package:shoppy/core/utils/device/device_utility.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
 
 class StoreScreen extends StatelessWidget {
@@ -115,14 +117,7 @@ class StoreScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  bottom: TabBar(
-                    tabAlignment: TabAlignment.start,
-                    isScrollable: true,
-                    indicatorColor: TColors.primary,
-                    labelColor: THelperFunctions.isDarkMode(context)
-                        ? TColors.white
-                        : TColors.primary,
-                    unselectedLabelColor: TColors.darkGrey,
+                  bottom: TTabBar(
                     tabs: [
                       Tab(
                         child: Text('sport'),
@@ -136,8 +131,26 @@ class StoreScreen extends StatelessWidget {
                 )
               ];
             },
-            body: Column()),
+            body: TabBarView(
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(TSizes.defaultSpace),
+                  child: Column(
+                    children: [
+                      TroundedContainer(
+                        showBorder: true,
+                        backGroundColor: Colors.transparent,
+                        borderColor: TColors.darkGrey,
+                        margin: EdgeInsets.only(bottom: TSizes.spaceBtwItems),
+                        child: Column(),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            )),
       ),
     );
   }
 }
+
