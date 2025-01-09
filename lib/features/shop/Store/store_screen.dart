@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shoppy/core/common/widgets/app%20bar/cart_counter.dart';
 import 'package:shoppy/core/common/widgets/app%20bar/custom_app_bar.dart';
 import 'package:shoppy/core/common/widgets/home_page/search/search_container.dart';
+import 'package:shoppy/core/common/widgets/texts/heading_section.dart';
 import 'package:shoppy/core/utils/constants/colors.dart';
 import 'package:shoppy/core/utils/constants/sizes.dart';
 import 'package:shoppy/core/utils/helpers/helper_functions.dart';
@@ -39,12 +40,24 @@ class StoreScreen extends StatelessWidget {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: TSizes.spaceBtwItems / 2,
                       ),
                       //Search container
-                      SearchContainer(
+                      const SearchContainer(
                         padding: 0,
+                      ),
+                      const SizedBox(
+                        height: TSizes.spaceBtwItems,
+                      ),
+                      //featured brands
+                      HeadingSection(
+                        title: 'Fetured Brands',
+                        textColor: THelperFunctions.isDarkMode(context)
+                            ? TColors.white
+                            : TColors.black,
+                        onPressed: () {},
+                        showActionButton: true,
                       ),
                     ],
                   ),
